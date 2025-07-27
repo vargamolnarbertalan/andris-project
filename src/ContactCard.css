@@ -1,0 +1,62 @@
+a[href^="tel"] {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Match the text color to surrounding text */
+}
+
+.contact-card > .card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.contactIcon{
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
+    width: auto;
+}
+
+.contact-card{
+    width: 33%;
+    padding: 10px;
+    height: 50%;
+}
+
+.contact-text{
+    font-size: 19px;
+    padding: 0;
+}
+
+.custom-card-body{
+    padding: 0;
+    padding-left: 3px;
+}
+
+.contact-title {
+    text-align: left;
+}
+
+.shrink-email {
+        overflow-wrap: break-word; /* Newer, preferred property */
+    }
+
+@media (max-width: 1085px) {
+  .contact-card{
+      width: 45%;
+      margin: 10px;
+      padding: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+      .contact-card{
+      width: 100%;
+      margin: 10px;
+      padding: 0;
+  }
+}

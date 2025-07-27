@@ -1,0 +1,56 @@
+.navbar-brand{
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background: #ccc;
+  margin: 0;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 5px;
+  /* background: linear-gradient(to left, #6a11cb, #2575fc); */
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  width: 0%;
+}
+
+.navbar{
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+.nav-item:hover .nav-link{
+  color:#2575fc;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+  pointer-events: none; /* Prevent interactions when hidden */
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.top-box4{
+  margin-bottom: 4px;
+  transform: translateY(0);
+  transition: margin-bottom 0.3s ease, transform 0.3s ease;
+}
+
+.top-box9{
+  margin-bottom: 9px;
+  transform: translateY(0);
+  transition: margin-bottom 0.3s ease, transform 0.3s ease;
+}

@@ -1,0 +1,6 @@
+services:
+  about-me:
+    container_name: aboutme-container
+    build: .
+    ports:
+      - "3000:80"

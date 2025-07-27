@@ -1,0 +1,279 @@
+/* Poppins betűtípus használata CSS-ben */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+div {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+  font-family: "Poppins", sans-serif;
+}
+.project-card {
+  padding: 12px 0px;
+}
+
+.card {
+  background-color: #fff; /* Initial color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+  background-color: rgb(106, 17, 203);
+  color: #fff; /* Change text color to white */
+}
+
+.card-title {
+  color: rgb(106, 17, 203);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.25rem;
+}
+
+.card:hover .card-title {
+  color: rgb(186, 211, 255);
+  /* Change text color to white */
+}
+
+.refs {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 90px 0;
+}
+
+.intro {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.row {
+  margin: 0px 10%;
+  padding-bottom: 30px;
+}
+
+.gradient-border {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 5px; /* Controls border thickness */
+  display: inline-block;
+  border-radius: 12px; /* Adjust for consistent rounded corners */
+  margin-right: 50px;
+  object-fit: scale-down;
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  margin-top: 8px;
+}
+
+.white-grad {
+  background: linear-gradient(to right, #fff, #fff);
+}
+
+.picHolder {
+  /*
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+*/
+}
+
+#introImage,
+#tvImage {
+  /*
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    */
+  height: 300px;
+  display: block;
+  border-radius: 8px; /* Inner radius for the image */
+}
+
+.lead-intro {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.lead-contact {
+  padding: 0 17%;
+  text-align: justify;
+}
+
+.lead-italic {
+  font-style: italic;
+}
+
+.introTitle {
+  margin-bottom: 60px;
+}
+.bigTitle {
+  margin-bottom: 25px;
+  font-size: 51px;
+}
+
+.contact-row {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+}
+
+#contactSection,
+#tvSection {
+  padding: 100px 3%;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+#tvSection {
+  background: linear-gradient(45deg, #000000, #434343);
+  color: #fff;
+  padding: 100px 3%;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.d-flex {
+  flex-direction: column;
+}
+
+.col-md-4 {
+  width: 100%;
+}
+
+.brackets {
+  font-weight: 900;
+  font-size: 100px;
+}
+
+.story {
+  padding: 0 17%;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.contactTitle {
+  margin-bottom: 40px;
+}
+
+.headline {
+  text-transform: uppercase;
+}
+
+.custom-alert {
+  width: 60%;
+  left: 20%;
+  bottom: 7%;
+  height: 6%;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  border-color: white;
+  z-index: 1023;
+}
+
+#alert-text {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+  position: absolute;
+  color: white;
+}
+
+#custom-alert-close {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  right: 0px;
+  color: white;
+  cursor: pointer;
+}
+
+.did-u-know {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.text-white-own {
+  color: white;
+}
+
+.center-title {
+  text-align: center;
+}
+
+@media (max-width: 995px) {
+  .headline {
+    font-size: 41px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row,
+  .picHolder {
+    flex-direction: column;
+    margin: 0px 10px;
+  }
+  .contact-row {
+    margin: 0;
+    flex-direction: row;
+  }
+  .gradient-border {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  #introImage,
+  #tvImage {
+    width: 100%;
+    height: auto;
+  }
+  .lead-contact,
+  .story {
+    padding: 0 10%;
+  }
+  .headline {
+    font-size: 31px;
+  }
+
+  .custom-alert {
+    width: 90%;
+    left: 5%;
+    bottom: 5%;
+    height: 10%;
+  }
+}
+
+@media (max-width: 425px) {
+  .lead-contact,
+  .story {
+    padding: 0 5%;
+  }
+
+  .did-u-know {
+    text-align: justify;
+  }
+  .headline {
+    font-size: 25px;
+  }
+}

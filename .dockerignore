@@ -1,0 +1,7 @@
+build
+node_modules
+devnotes.txt
+Dockerfile
+docker-compose.yml
+.git
+.github
