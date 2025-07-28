@@ -52,8 +52,9 @@ i18n
                     sText10: "Unlike corporate mobility managers who typically work in-house, I operate as an independent service provider, offering flexible and tailored solutions to companies and individuals alike.",
                     sText11: "Whether you're moving alone or with your family, I'm here to make your transition to Hungary smooth, efficient, and worry-free.",
                     sText12: "Let me handle the logistics—so you can focus on your new chapter.",
-                    sText13: "Please do not hesitate to contact me if you have any questions regarding your current or future stay in Hungary."
-
+                    sText13: "Please do not hesitate to contact me if you have any questions regarding your current or future stay in Hungary.",
+                    connectText: "If you are a foreign national planning to live and work in Hungary, or a company seeking reliable support in employing international talent, I am here to help.",
+                    phone: "Phone"
                 },
             },
             hu: {
@@ -96,7 +97,9 @@ i18n
                     sText10: "Más, vállalaton belül dolgozó mobilitási menedzserekkel ellentétben független szolgáltatóként dolgozom, így rugalmas, testre szabott megoldásokat kínálok cégeknek és magánszemélyeknek egyaránt.",
                     sText11: "Akár egyedül költözöl, akár a családoddal, azon dolgozom, hogy a Magyarországra való átmenet gördülékeny, hatékony és stresszmentes legyen.",
                     sText12: "Hagyd, hogy én intézzem a logisztikát – így te már az új fejezetre koncentrálhatsz!",
-                    sText13: "Ha bármilyen kérdésed van a jelenlegi vagy jövőbeli magyarországi tartózkodásoddal kapcsolatban, keress bizalommal."
+                    sText13: "Ha bármilyen kérdésed van a jelenlegi vagy jövőbeli magyarországi tartózkodásoddal kapcsolatban, keress bizalommal.",
+                    connectText: "Ha külföldi állampolgárként Magyarországon szeretnél élni és dolgozni, vagy vállalatként megbízható támogatást keresel a nemzetközi tehetségek foglalkoztatásában, örömmel segítek.",
+                    phone: "Telefon"
                 },
             },
         },

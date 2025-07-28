@@ -107,7 +107,7 @@ const BaseTemplate = () => {
                 <img id="missionImage" className="pic textImage" src="/img/4.jpg" alt='avatar'></img>
               </div>
               <div className='myTextWrapper'>
-                <p className="list-title story lead text-white-own">
+                <p className="list-title story lead text-white-own mobileJustify">
                   {t('missionText1')}
                 </p>
                 <div className="myListHolder white-text">
@@ -173,38 +173,42 @@ const BaseTemplate = () => {
               
 
               <p className="lead text-white-own">
-                <p>{t('sText9')}</p>
-                <p>{t('sText10')}</p>
-                <p>{t('sText11')}</p>
-                <p>{t('sText12')}</p>
-                <p>{t('sText13')}</p>
+                <p className='mobileJustify'>{t('sText9')}</p>
+                <p className='mobileJustify'>{t('sText10')}</p>
+                <p className='mobileJustify'>{t('sText11')}</p>
+                <p className='mobileJustify'>{t('sText12')}</p>
+                <p className='mobileJustify'>{t('sText13')}</p>
               </p>
             </div>
           </div>
         </section>
 
 
-        <section id="Section" className="">
-          <div className="intro">
-            <h1 className="center-title contactTitle display-5">Várom megkeresését!</h1>
-            <p className="lead-contact lead">
-              Munkaszüneti napokon is kereshet, a hagyományos munkaidő óráin kívül. Állok rendelkezésére videochaten, személyesen, üzenetben és természetesen telefonon. Ha nem ért el, visszahívom.
-            </p>
-            <p className="lead-contact lead">
-              Jelenleg csak limitált számú megrendelést fogadok, mert a minőséget helyezem előtérbe, nem a mennyiséget.
-            </p>
-            <p className="lead-italic lead-contact lead">
-              Amennyiben valaki az ön ajánlása alapján válik megrendelőmmé, ön visszakapja a saját költségének 20%-át.
-            </p>
-          </div>
+        <section id="connectSection">
+          <div className="container text-center">
+            <h1 className="introTitle intro display-4">{t('connect')}</h1>
 
-          <div className="contact-row row">
-            <ContactCard imgSrc="whatsapp.webp" link="https://wa.me/+36202366969" title="WhatsApp" desc="+36 20 236 6969" />
-            <ContactCard imgSrc="imessage.webp" link={false} title="iMessage" desc="+36 20 236 6969" />
-            <ContactCard imgSrc="viber.webp" link="viber://add?number=36202366969" title="Viber" desc="+36 20 236 6969" />
-            <ContactCard imgSrc="phone.webp" link="tel:+36202366969" title="Telefon" desc="+36 20 236 6969" />
-            <ContactCard imgSrc="mail.webp" link="mailto:vargamolnar.bertalan@vmb.codes" title="Email" desc="vargamolnar.bertalan@vmb.codes" />
-            <ContactCard imgSrc="discord.webp" link="https://discordapp.com/users/335719855976349697" title="Discord" desc="ID: b3rc1" />
+            <div className="picHolder">
+              <div className="gradient-border">
+                <img id="connectImage" className="pic textImage" src="/img/3.jpg" alt='avatar'></img>
+              </div>
+              <p className="lead-intro intro lead mobileJustify center-title">
+                {t('connectText')}
+              </p>
+            </div>
+            <div className='myTextWrapper'>
+              <div className="contact-row row">
+                <ContactCard imgSrc="whatsapp.webp" link="https://wa.me/+36202080124" title="WhatsApp" desc="+36 20 208 0124" />
+                <ContactCard imgSrc="imessage.webp" link={false} title="iMessage" desc="+36 20 208 0124" />
+                <ContactCard imgSrc="viber.webp" link="viber://add?number=36202080124" title="Viber" desc="+36 20 208 0124" />
+                <ContactCard imgSrc="phone.webp" link="tel:+36202080124" title={t('phone')} desc="+36 20 208 0124" />
+                <ContactCard imgSrc="mail.webp" link="mailto:andras.bene1980@gmail.com" title="Email" desc="" />
+                <ContactCard imgSrc="discord.webp" link="https://discordapp.com/TBD" title="Discord" desc="ID: TBD" />
+                <ContactCard imgSrc="telegram.png" link="https:/t.me/TBD" title="Telegram" desc="nemismert" />
+                <ContactCard imgSrc="teams.png" link="TBD" title="MS Teams" desc="nemismert" />
+                <ContactCard imgSrc="linkedin.png" link="https://www.linkedin.com/in/bene-andras/" title="LinkedIn" desc="/bene-andras" />
+              </div>
+            </div>
           </div>
         </section>
 

@@ -34,6 +34,7 @@ a[href^="tel"] {
 .custom-card-body{
     padding: 0;
     padding-left: 3px;
+    flex: unset;
 }
 
 .contact-title {
@@ -42,6 +43,7 @@ a[href^="tel"] {
 
 .shrink-email {
         overflow-wrap: break-word; /* Newer, preferred property */
+        text-align: left;
     }
 
 @media (max-width: 1085px) {

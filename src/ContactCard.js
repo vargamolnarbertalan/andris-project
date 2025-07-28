@@ -23,7 +23,7 @@ const ContactCard = ({imgSrc, title, desc, link}) => {
                  <div className="custom-card-body card-body">
                     <div className="contact-title card-title project-card-title-new">{title}</div>
                     <p className={title === "Email" ? "shrink-email contact-text card-text" : "contact-text card-text"}>
-                        {title === "Email" ? <>vargamolnar.bertalan<wbr></wbr>@vmb.codes</> : desc}
+                        {title === "Email" ? <>andras.bene1980<wbr></wbr>@gmail.com</> : desc}
                     </p>
                 </div>
             </div>
