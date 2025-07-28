@@ -1,12 +1,10 @@
-/* Poppins betűtípus használata CSS-ben */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Monsterrat", sans-serif;
 }
 
 div {
   text-wrap: pretty;
   overflow-wrap: break-word;
-  font-family: "Poppins", sans-serif;
 }
 .project-card {
   padding: 12px 0px;
@@ -69,24 +67,16 @@ div {
 }
 
 .picHolder {
-  /*
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-#introImage,
-#tvImage {
-  /*
-    float: left;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    */
+.textImage {
   height: 300px;
   display: block;
-  border-radius: 8px; /* Inner radius for the image */
+  border-radius: 8px;
 }
 
 .lead-intro {
@@ -110,6 +100,12 @@ justify-content: center;
 .bigTitle {
   margin-bottom: 25px;
   font-size: 51px;
+}
+
+#aboutSection, #mediaSection{
+  color: black;
+  padding: 100px 0;
+  background-color: white;
 }
 
 .contact-row {
@@ -223,6 +219,20 @@ justify-content: center;
   text-align: center;
 }
 
+.list-title{
+  text-align: left;
+  padding: 0;
+  font-size: 26px;
+}
+
+ul{
+  font-size: 20px;
+}
+
+.picHolder2{
+  margin-top: 30px;
+}
+
 @media (max-width: 995px) {
   .headline {
     font-size: 41px;
@@ -230,6 +240,22 @@ justify-content: center;
 }
 
 @media (max-width: 768px) {
+  .list-title{
+
+  font-size: 20px;
+  text-align: left;
+}
+ul{
+  font-size: 18px;
+}
+  .textImage{
+    width: 100%;
+    height: auto;
+  }
+  #aboutSection, #mediaSection{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .row,
   .picHolder {
     flex-direction: column;
@@ -242,11 +268,7 @@ justify-content: center;
   .gradient-border {
     margin-bottom: 25px;
     width: 100%;
-  }
-  #introImage,
-  #tvImage {
-    width: 100%;
-    height: auto;
+    margin-right: 0;
   }
   .lead-contact,
   .story {
@@ -262,6 +284,7 @@ justify-content: center;
     bottom: 5%;
     height: 10%;
   }
+
 }
 
 @media (max-width: 425px) {

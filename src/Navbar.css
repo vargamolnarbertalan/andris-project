@@ -1,5 +1,5 @@
 .navbar-brand{
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #2ECC71, #176839);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -9,7 +9,7 @@
 .progress-container {
   width: 100%;
   height: 5px;
-  background: #ccc;
+  background: #C0392B;
   margin: 0;
 }
 
@@ -17,7 +17,7 @@
 .progress-bar {
   height: 5px;
   /* background: linear-gradient(to left, #6a11cb, #2575fc); */
-  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  background: linear-gradient(90deg, #2ECC71, #2ECC71);
   width: 0%;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .nav-item:hover .nav-link{
-  color:#2575fc;
+  color:#2ECC71;
 }
 
 .hidden {

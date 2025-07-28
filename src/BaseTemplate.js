@@ -4,9 +4,11 @@ import Navbar from "./Navbar";
 import ProjectCard from "./ProjectCard";
 import './BaseTemplate.css';
 import ContactCard from "./ContactCard";
+import { useTranslation } from 'react-i18next';
 //import Popup from "./Popup";
 
 const BaseTemplate = () => {
+  const { t } = useTranslation();
 
   /*
   const [popupOpen, setPopupOpen] = useState(() => {
@@ -60,6 +62,7 @@ const BaseTemplate = () => {
 
         <Navbar />
         {/* Hero Section with Gradient Background */}
+        {/*      
         <section id="titleSection" style={styles.heroSection}>
           <div className="container text-center">
             <h1 className="headline bigTitle display-3 text-white-own">Ingyen elkészítem önnek álmai weboldalát*, és csak akkor fizet, ha elégedett!</h1>
@@ -73,78 +76,115 @@ const BaseTemplate = () => {
             </p>
           </div>
         </section>
+        */}
 
-        <section id="introSection" style={styles.introSection}>
+        <section id="aboutSection">
           <div className="container text-center intro">
-            <h1 className="introTitle display-4">Bemutatkozás</h1>
+            <h1 className="introTitle display-4">{t('about')}</h1>
             <div className="picHolder">
+              <div className="gradient-border">
+                <img id="introImage" className="pic textImage" src="/img/1.jpg" alt='avatar'></img>
+              </div>
+              <div className='myTextWrapper'>
+                <p className="lead-intro lead">
+                  {t('aboutText1')}
+                  <p></p>
+                  {t('aboutText2')}
+                  <p></p>
+                  {t('aboutText3')}
+                </p>
+              </div>
 
-              <p className="lead-intro lead">
-                <div className="gradient-border">
-                  <img id="introImage" className="pic" src="introPic2.webp" alt='avatar'></img>
-                </div>
-                Üdvözlöm!
-                <p></p>
-                Varga-Molnár Bertalan vagyok, fiatal és agilis vállalkozó. Már alig várom, hogy segíthessek vállalkozása fejlesztésében!
-                <p></p>
-                Miskolci Egyetem Gépészmérnöki és Informatikai Karán végeztem mint programtervező informatikus. Volt még bennem kraft, ezért folyamatosan kerestem a lehetőségeket, hogy miként tudom magam továbbfejleszteni.
-                <p></p>
-                Soha nem vagyok teljesen elégedett: hiába dolgozom kiemelkedő tulajdonosi szemlélettel - hiszen nemcsak az ügyfélnek, magam elégedettségére is dolgozom - amint végeztem egy projekttel rögtön látom, miben lehetett volna sokkal jobb.
-                <p></p>
-                Akkor tudok igazán rápörögni valamire, ha innovatívan lehet hozzáállni egy projekthez. Ennek bizonyítéka a referenciám között szereplő arculattervezés és integrálás; ráncfelvarrtam egy teljes közvetítés típust, ami ezután sztenderddé vált a közvetítő cégcsoportján belül.
-                <p></p>
-                Nyugodtan bízza rám vállalkozásának fejlesztését egy új weblapon vagy szoftveren keresztül.
-                Bizalmát rugalmassággal, garanciákkal és magas tulajdonosi szemlélettel fogom honorálni.
-                Nézze át referenciáim, és ha el tudja képzelni a közös munkát, ne habozzon felkeresni az elérhetőségeim közül az Ön számára legkényelmesebb módon.
-                <p></p>
-                Barátsággal,
-                Berci
-              </p>
             </div>
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section id="refSection" className="refs">
-          <h2 className="center-title display-5 text-white-own" style={styles.refStyle}>Korábbi történeteim</h2>
+        <section id="missionSection" className="refs">
+          <h2 className="center-title display-5 text-white-own" style={styles.refStyle}>{t('mission')}</h2>
+          <div className='container'>
+            <div className='picHolder'>
+              <div className="gradient-border">
+                <img id="missionImage" className="pic textImage" src="/img/4.jpg" alt='avatar'></img>
+              </div>
+              <div className='myTextWrapper'>
+                <p className="list-title story lead text-white-own">
+                  {t('missionText1')}
+                </p>
+                <div className="myListHolder white-text">
+                  <ul>
+                    <li>{t('missionText2')}</li>
+                    <li>{t('missionText3')}</li>
+                    <li>{t('missionText4')}</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section id="mediaSection" className='center-title'>
+          <div className='intro'>
+          <h1 className="introTitle display-4">{t('media')}</h1>
           <p className="story lead text-white-own">
-            Két hiánypótló saját alkalmazás mellett évek óta elégedett felhasználója programjaimnak az Esport1 Kft. és a Magyar E-Sport Szövetség. Előbbi a belső munkamenetek gyorsítására és egyszerűsítésére veszi igénybe a fejlesztéseimet, utóbbi pedig az általuk szervezett versenyek számos szezonja óta emeli a nézői élményt a kamera appomal, így megszólítván még több fogyasztót.
+            {t('mediaText1')}
           </p>
+          </div>
           <div className="row">
             <div className="col">
-              <ProjectCard imgSrc="fc.webp" link="https://footy.vmb.codes" title="Footy Calendar" desc="A legnagyobb munkám eddig, amellyel a felhasználó egy kattintással hozzáadhatja a világ bármely csapatának mérkőzéseit a naptárához." />
-              <ProjectCard imgSrc="viewers.webp" link={false} title="Egyidejű nézők" desc="Ez a webszerver Twitch, YouTube és TikTok csatornák egyidejű nézőszámát írja ki élőben, és folyamatosan frissül. Hasznos a tartalomgyártók számára." />
-              <ProjectCard imgSrc="excelion.webp" link={false} title="Excelion" desc="Egy interfész, ami lehetővé teszi, hogy a lokális .xlsx vagy .xlsm munkafüzetünket WEB API-szerűen irányítsuk HTTP GET requesteken keresztül. Az Excelion szerver kap egy fájl elérési útvonalat és egy utasítás nevet, amit lefuttat anélkül, hogy a felhasználó hozzáérne az Excelhez. Televíziós feliratozáshoz remek kiegészítő." />
+              <ProjectCard imgSrc="/img/hrp.webp" link="https://www.hrportal.hu/c/ezeken-a-teruleteken-a-legnagyobb-a-munkaerohiany-20231221.html" title={t('cTitle1')} desc={t('cText1')} />
+              <ProjectCard imgSrc="/img/rt.jpg" link="https://blue.recruitech.hu/eloado/czellecz-zoltan-2" title={t('cTitle2')} desc={t('cText2')} />
             </div>
             <div className="col">
-              <ProjectCard imgSrc="kekszalag.webp" link="https://www.youtube.com/live/cW5iLFYk_Ks?feature=shared&t=14776" title="Kékszalag API" desc="Hajókövetési rendszer összekötése Európa legnagyobb tókerülő versenye élő közvetítésének feliratozó szoftverével, továbbá időjárás API fejlesztése és integrálása valós idejű adatok lekéréséhez. Videóért kattintson!" />
-              <ProjectCard imgSrc="fts.webp" link="https://shoflo.video1.hu" title="Follow the Show" desc="Produkciós csapatok számára az adásmenet szerkesztésére és élő követésére alkalmas webapp, tableten és telefonon is kényelmes elrendezéssel." />
-              <ProjectCard imgSrc="portroyal.webp" link="https://portroyalablak.hu" title="Weboldal felújítás" desc="Nyílászárókkal foglalkozó vállakozás oldalának kinézeti és működési felújítása a forgalom növelése és több megrendelés érdekében." />
+              <ProjectCard imgSrc="/img/pc.jpg" link="https://www.penzcentrum.hu/karrier/20231220/brutalis-statisztika-erkezett-errol-a-teruletrol-hianyzik-a-legtobb-munkavallalo-1145030" title={t('cTitle3')} desc={t('cText3')} />
+              <ProjectCard imgSrc="/img/gyms.jpg" link="https://gymsmkik.hu/kozel-szaz-vallalkozasvezeto-es-hr-szakember-folytatott-sikeres-eszmecseret-hr-konferenciankon" title={t('cTitle4')} desc={t('cText4')} />
             </div>
             <div className="col">
-              <ProjectCard imgSrc="r6.webp" link="https://www.youtube.com/live/Iu6zCTUwGIU?si=fD515rLxPq1WgxdP&t=9279" title="Esport kamera HUD" desc="Szakdolgozatom alapjául is szolgáló appom, ami lehetővé teszi az esport mérkőzéseken a játékosok kameráinak automatikus megjelenítését. Példavideóért kattintson a képre!" />
-              <ProjectCard imgSrc="wp.webp" link="https://pass.vmb.codes" title="WassPord" desc="Ingyenes és biztonságos felhő alapú adatkezelő bejelentkezési- és fizetési információkhoz és privát feljegyzésekhez. Elérhető hozzá szintén saját, a bejelentkezést automatikusan kitöltő bővítmény." />
-              <ProjectCard imgSrc="encoder.webp" link="https://github.com/vargamolnarbertalan/ebu-normalizer" title="Média enkódoló" desc="Dockerizált FFMPEG alapú videó enkóder és audió normalizáló. Jelentősen megkönnyíti és felgyorsítja a médiafájlok produkcióba való integrálását. Alacsony erőforrás igényű." />
-            </div>
-          </div>
-        </section>
-
-        <section id="tvSection" style={styles.tvSection}>
-          <div className="container text-center">
-            <h1 className="white-text introTitle display-4">Ingyenes élő közvetítés eseményéről!</h1>
-            <div className="picHolder">
-              <p className="white-text lead-intro lead">
-                <div className="white-grad gradient-border">
-                  <img id="tvImage" className="pic" src="tvPic.webp" alt='tv avatar'></img>
-                </div>
-                A programozás mellett szenvedélyesen szeretek élő közvetítéseket gyártani, legyen a közvetítési felület YouTube, Twitch, Facebook, TikTok, X, Instagram, saját oldal vagy akár ez mind egyszerre. Kitartó munkámnak hála Magyarországon elsőként és eddig egyedüliként "Az év E-Sportolója" különdíjat kaptam az adás rendezési tevékenységemért. Legyen e-sport, sport, céges rendezvény, magán esemény vagy bármi más, amit megosztana a nagyvilággal élőben, én színvonalasan meg tudom oldani, mintha a TV-t nézné! Egy adott partner számára AZ ELSŐ KÖZVETÍTÉS TELJESEN INGYENES, szóval nincs veszíteni valója. Az évek alatt olyan közvetítéseken szereztem tapasztalatot, mint a LOL Worlds, CS Major, R6 Six Invitational és GeoGuessr VB magyar partner adásai, vagy az Excel Világbajnokság, V4 Future Sports Festival, Telekom E-Sport Kupa, Magyar E-Sport Fesztivál és a Magyar E-Sport Bajnokság hoszt adásai.
-              </p>
+              <ProjectCard imgSrc="/img/scm.jpg" link="https://www.scmonitor.hu/uploads/media/publications/0001/05/901f7ae5c7336299dfe41e27877cacd485722fc2.pdf" title={t('cTitle5')} desc={t('cText5')} />
+              <ProjectCard imgSrc="/img/5.jpg" link="https://work-force.hu/2023/11/24/kulturak-harca-hr-strategia-az-atalakulo-vilagban/" title={t('cTitle6')} desc={t('cText6')} />
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section id="contactSection" className="">
+        <section id="serviceSection" className="refs">
+          <h2 className="center-title display-5 text-white-own" style={styles.refStyle}>{t('services')}</h2>
+          <div className='container'>
+            <div className='myTextWrapper'>
+              <p className="lead text-white-own" style={{ textAlign: 'justify' }}>{t('sText1')}</p>
+              <p className="lead text-white-own" style={{ textAlign: 'justify' }}>{t('sText2')}</p>
+            </div>
+            <div className='picHolder' style={{justifyContent: 'flex-start'}}>
+              <div className="gradient-border" style={{float: 'left'}}>
+                <img id="serviceImage" className="pic textImage" src="/img/2.jpg" alt='avatar'></img>
+              </div>
+              <div className="myListHolder white-text">
+                <ul>
+                  <li>{t('sText3')}</li>
+                  <li>{t('sText4')}</li>
+                  <li>{t('sText5')}</li>
+                  <li>{t('sText6')}</li>
+                  <li>{t('sText7')}</li>
+                  <li>{t('sText8')}</li>
+                </ul>
+              </div>
+            </div>
+            <div className='picHolder2'>
+              
+
+              <p className="lead text-white-own">
+                <p>{t('sText9')}</p>
+                <p>{t('sText10')}</p>
+                <p>{t('sText11')}</p>
+                <p>{t('sText12')}</p>
+                <p>{t('sText13')}</p>
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="Section" className="">
           <div className="intro">
             <h1 className="center-title contactTitle display-5">Várom megkeresését!</h1>
             <p className="lead-contact lead">
@@ -189,7 +229,6 @@ const BaseTemplate = () => {
 
 const styles = {
   pageContainer: {
-    fontFamily: "Arial, sans-serif",
     lineHeight: 1.6
   },
   heroSection: {
@@ -199,11 +238,6 @@ const styles = {
   },
   refStyle: {
     marginBottom: "24px"
-  },
-  introSection: {
-    background: "white",
-    padding: "100px 0",
-    colour: "black"
   }
 };
 
