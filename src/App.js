@@ -7,17 +7,21 @@ const SplashScreen = ({ onFinish }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onFinish();
-    }, 2000); // 2 seconds
-
+    }, 2000);
     return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
     <div className="splash-screen">
-      <img src="/img/splash-art.png" alt="Splash" className="splash-image" />
+      <div className="splash-image-wrapper">
+        <img src="/img/splash-art.png" alt="Color" className="splash-image-color" />
+        <img src="/img/splash-art-bw.png" alt="BW" className="splash-image-bw" />
+      </div>
     </div>
   );
 };
+
+
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
