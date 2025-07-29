@@ -13,7 +13,7 @@ const flags = {
 
 export default function LangSwitcher() {
     const { i18n } = useTranslation();
-    const currentLang = i18n.language;
+    const currentLang = i18n.language !== 'hu' ? 'en' : 'hu';
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
