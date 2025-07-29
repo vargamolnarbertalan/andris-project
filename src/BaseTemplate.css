@@ -1,3 +1,12 @@
+:root {
+  --andris-blue: #012a48;
+  --andris-yellow: #efdec2;
+  --andris-red: #b51d1a;
+  --andris-green: #175030;
+  --andris-bluelight: #0063aa;
+  --andris-yellowdark: #afa390;
+}
+
 body {
   font-family: "Monsterrat", sans-serif;
 }
@@ -16,29 +25,29 @@ div {
 }
 
 .card:hover {
-  background-color: rgb(106, 17, 203);
+  background-color: var(--andris-blue);
   color: #fff; /* Change text color to white */
 }
 
 .card-title {
-  color: rgb(106, 17, 203);
+  color: var(--andris-blue);
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 1.25rem;
 }
 
 .card:hover .card-title {
-  color: rgb(186, 211, 255);
+  color: white;
   /* Change text color to white */
 }
 
 .refs {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, var(--andris-blue), var(--andris-bluelight));
   padding: 90px 0;
 }
 
 .intro {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, var(--andris-blue), var(--andris-bluelight));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -50,7 +59,7 @@ div {
 }
 
 .gradient-border {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, var(--andris-blue), var(--andris-bluelight));
   padding: 5px; /* Controls border thickness */
   display: inline-block;
   border-radius: 12px; /* Adjust for consistent rounded corners */

@@ -147,7 +147,7 @@ const BaseTemplate = () => {
         </section>
 
         {/* Contact Section */}
-        <section id="serviceSection" className="refs">
+        <section id="servicesSection" className="refs">
           <h2 className="center-title display-5 text-white-own" style={styles.refStyle}>{t('services')}</h2>
           <div className='container'>
             <div className='myTextWrapper'>
@@ -203,9 +203,9 @@ const BaseTemplate = () => {
                 <ContactCard imgSrc="viber.webp" link="viber://add?number=36202080124" title="Viber" desc="+36 20 208 0124" />
                 <ContactCard imgSrc="phone.webp" link="tel:+36202080124" title={t('phone')} desc="+36 20 208 0124" />
                 <ContactCard imgSrc="mail.webp" link="mailto:andras.bene1980@gmail.com" title="Email" desc="" />
-                <ContactCard imgSrc="discord.webp" link="https://discordapp.com/TBD" title="Discord" desc="ID: TBD" />
-                <ContactCard imgSrc="telegram.png" link="https:/t.me/TBD" title="Telegram" desc="nemismert" />
-                <ContactCard imgSrc="teams.png" link="TBD" title="MS Teams" desc="nemismert" />
+                <ContactCard imgSrc="discord.webp" link="https://discordapp.com/1399693015840325653" title="Discord" desc="andrasbene" />
+                <ContactCard imgSrc="telegram.png" link={false} title="Telegram" desc="+36 20 208 0124" />
+                <ContactCard imgSrc="teams.png" link={false} title="MS Teams" desc="" />
                 <ContactCard imgSrc="linkedin.png" link="https://www.linkedin.com/in/bene-andras/" title="LinkedIn" desc="/bene-andras" />
               </div>
             </div>
@@ -215,11 +215,12 @@ const BaseTemplate = () => {
         {/* Footer Section */}
         <section id="footerSection" className="">
           <div class="container">
+            
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
               <div class="col-md-4 d-flex align-items-center">
-                <span class="center-title text-body-secondary">© {new Date().getFullYear()} Varga-Molnár Bertalan</span>
-                <span class="center-title text-body-secondary">Diplomás szoftverfejlesztő, számlaképes egyéni vállalkozó</span>
-                <span class="center-title text-body-secondary">Adószám: 90183128-1-25</span>
+                <span class="center-title text-body-secondary">© {new Date().getFullYear()} {/*Varga-Molnár Bertalan*/}</span>
+                {/*<span class="center-title text-body-secondary">Diplomás szoftverfejlesztő, számlaképes egyéni vállalkozó</span>*/}
+                {/*<span class="center-title text-body-secondary">Adószám: 90183128-1-25</span>*/}
               </div>
             </footer>
           </div>

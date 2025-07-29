@@ -1,5 +1,5 @@
 .navbar-brand{
-  background: linear-gradient(to right, #2ECC71, #176839);
+  background: linear-gradient(to right, var(--andris-blue), var(--andris-bluelight));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -9,7 +9,7 @@
 .progress-container {
   width: 100%;
   height: 5px;
-  background: #C0392B;
+  background: var(--andris-yellowdark);
   margin: 0;
 }
 
@@ -17,17 +17,18 @@
 .progress-bar {
   height: 5px;
   /* background: linear-gradient(to left, #6a11cb, #2575fc); */
-  background: linear-gradient(90deg, #2ECC71, #2ECC71);
+  background: linear-gradient(90deg, var(--andris-bluelight), var(--andris-blue));
   width: 0%;
 }
 
 .navbar{
   flex-direction: column;
   padding-bottom: 0;
+  background-color: var(--andris-yellow);
 }
 
 .nav-item:hover .nav-link{
-  color:#2ECC71;
+  color: var(--andris-bluelight);
 }
 
 .hidden {
@@ -53,4 +54,24 @@
   margin-bottom: 9px;
   transform: translateY(0);
   transition: margin-bottom 0.3s ease, transform 0.3s ease;
+}
+
+.navImage {
+  height: 50px;
+  display: block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.mynavbar-brand{
+  padding: 0;
+}
+
+.mynavbar-text{
+  color: var(--andris-blue);
+}
+
+.mynavbar-text:hover{
+  color: var(--andris-bluelight);
 }

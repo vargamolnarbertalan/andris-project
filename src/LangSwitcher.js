@@ -28,7 +28,7 @@ export default function LangSwitcher() {
                         changeLanguage(langCode)
                     }}
                     className={`btn btn-sm btn-outline-secondary p-1`}
-                    style={{ backgroundColor: currentLang === langCode ? '#2ECC71' : '#F5F5F5'}}
+                    style={{ opacity: currentLang === langCode ? 1 : 0.5 }}
                     aria-label={`Switch to ${label}`}
                 >
                     <img

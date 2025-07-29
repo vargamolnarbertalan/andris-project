@@ -17,10 +17,10 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <nav className="navbar navbar-expand-lg navbar-light sticky-top">
             <div className={isVisible ? 'top-box9 container-fluid' : 'top-box4 container-fluid'}>
-                <a className="navbar-brand" href="#">
-                    {t('name')}
+                <a className="mynavbar-brand navbar-brand" href="#">
+                    <img id="navLogo" className="navImage" src="/img/mainlogo.jpg" alt='logo'></img>
                 </a>
                 <button
                     className="navbar-toggler"
@@ -37,19 +37,19 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="#aboutSection">{t('about')}</a>
+                            <a className="mynavbar-text nav-link" href="#aboutSection">{t('about')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#missionSection">{t('mission')}</a>
+                            <a className="mynavbar-text nav-link" href="#missionSection">{t('mission')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#mediaSection">{t('media')}</a>
+                            <a className="mynavbar-text nav-link" href="#mediaSection">{t('media')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#servicesSection">{t('services')}</a>
+                            <a className="mynavbar-text nav-link" href="#servicesSection">{t('services')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#connectSection">{t('connect')}</a>
+                            <a className="mynavbar-text nav-link" href="#connectSection">{t('connect')}</a>
                         </li>
                     </ul>
 
