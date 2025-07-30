@@ -1,30 +1,23 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './MyForm.css';
+import emailjs from '@emailjs/browser';
+
 
 export default function ContactForm() {
     const { t } = useTranslation();
-    const [formData, setFormData] = useState({
-        name: '',
-        emailOrPhone: '',
-        message: ''
-    });
 
     const [submitted, setSubmitted] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
     const handleSubmit = (e) => {
+        const form = e.target;
         e.preventDefault();
 
-        // Replace this with your email sending logic (e.g. EmailJS)
-        console.log('Form submitted:', formData);
+        emailjs.send('service_481ylkv', 'template_jbgg7i5', {
+            erdeklodo_nev: form.name.value,
+            erdeklodo_email: form.emailOrPhone.value,
+            erdeklodo_uzenet: form.message.value,
+        }, 'UZ2dqjLckiWjIBG_3');
 
         setSubmitted(true);
     };
@@ -35,7 +28,7 @@ export default function ContactForm() {
                 {t('connectText')}
             </p>
             {submitted ? (
-                <p>{t('fSuccessMsg')}</p>
+                <p id="success-msg">{t('fSuccessMsg')}</p>
             ) : (
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -45,8 +38,6 @@ export default function ContactForm() {
                             name="name"
                             id="name"
                             required
-                            value={formData.name}
-                            onChange={handleChange}
                         />
                     </div>
 
@@ -57,8 +48,6 @@ export default function ContactForm() {
                             name="emailOrPhone"
                             id="emailOrPhone"
                             required
-                            value={formData.emailOrPhone}
-                            onChange={handleChange}
                         />
                     </div>
 
@@ -70,8 +59,6 @@ export default function ContactForm() {
                             id="message"
                             rows="4"
                             required
-                            value={formData.message}
-                            onChange={handleChange}
                         />
                     </div>
 

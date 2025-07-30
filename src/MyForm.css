@@ -68,6 +68,14 @@ textarea:focus {
     box-shadow: 0 0 4px var(--andris-blue);
 }
 
+#success-msg{
+    padding-bottom: 80px;
+    color: var(--andris-bluelight);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
 @media (max-width: 768px) {
 .contact-form-container{
     height: auto;
@@ -80,5 +88,9 @@ textarea:focus {
 }
 #connectUpper{
     margin-bottom: 20px;
+}
+#success-msg{
+    padding-bottom: 30px;
+    font-size: 22px;
 }
 }
