@@ -81,7 +81,7 @@ const BaseTemplate = () => {
 
         <section id="aboutSection">
           <div className="container text-center intro">
-            <h1 className="introTitle display-4">{t('about')}</h1>
+            <h1 className="myTitle introTitle display-4">{t('about')}</h1>
             <div className="picHolder">
               <div className="gradient-border">
                 <img id="introImage" className="pic textImage" src="/img/1.jpg" alt='avatar'></img>
@@ -101,7 +101,7 @@ const BaseTemplate = () => {
         </section>
 
         <section id="missionSection" className="refs">
-          <h2 className="center-title display-5 text-white-own" style={styles.refStyle}>{t('mission')}</h2>
+          <h2 className="myTitle center-title display-5 text-white-own" style={styles.refStyle}>{t('mission')}</h2>
           <div className='container'>
             <div className='picHolder'>
               <div className="gradient-border">
@@ -126,7 +126,7 @@ const BaseTemplate = () => {
 
         <section id="mediaSection" className='center-title'>
           <div className='intro'>
-          <h1 className="introTitle display-4">{t('media')}</h1>
+            <h1 className="myTitle introTitle display-4">{t('media')}</h1>
           <p className="story lead text-white-own">
             {t('mediaText1')}
           </p>
@@ -149,7 +149,7 @@ const BaseTemplate = () => {
 
         {/* Contact Section */}
         <section id="servicesSection" className="refs">
-          <h2 className="center-title display-5 text-white-own" style={styles.refStyle}>{t('services')}</h2>
+          <h2 className="myTitle center-title display-5 text-white-own" style={styles.refStyle}>{t('services')}</h2>
           <div className='container'>
             <div className='myTextWrapper'>
               <p className="lead text-white-own" style={{ textAlign: 'justify' }}>{t('sText1')}</p>
@@ -187,7 +187,7 @@ const BaseTemplate = () => {
 
         <section id="connectSection">
           <div className="container text-center">
-            <h1 className="introTitle intro display-4">{t('connect')}</h1>
+            <h1 className="myTitle introTitle intro display-4">{t('connect')}</h1>
 
             <div id="connectUpper" className="picHolder">
               <div className="gradient-border">

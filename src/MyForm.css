@@ -23,8 +23,7 @@ input, textarea{
 .contact-form-container{
     display: flex;
     flex-direction: column;
-    height: 300px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
  #connectTextP{

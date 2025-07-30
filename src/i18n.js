@@ -8,7 +8,7 @@ i18n
     .init({
         fallbackLng: 'en',
         detection: {
-            order: ['localStorage', 'navigator'],
+            order: ['localStorage'],
             caches: ['localStorage'], // Persist language
         },
         resources: {
