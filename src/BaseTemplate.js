@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Navbar";
 import ProjectCard from "./ProjectCard";
+import MyForm from "./MyForm";
 import './BaseTemplate.css';
 import ContactCard from "./ContactCard";
 import { useTranslation } from 'react-i18next';
@@ -188,13 +189,11 @@ const BaseTemplate = () => {
           <div className="container text-center">
             <h1 className="introTitle intro display-4">{t('connect')}</h1>
 
-            <div className="picHolder">
+            <div id="connectUpper" className="picHolder">
               <div className="gradient-border">
                 <img id="connectImage" className="pic textImage" src="/img/3.jpg" alt='avatar'></img>
               </div>
-              <p className="lead-intro intro lead mobileJustify center-title">
-                {t('connectText')}
-              </p>
+              <MyForm></MyForm>
             </div>
             <div className='myTextWrapper'>
               <div className="contact-row row">

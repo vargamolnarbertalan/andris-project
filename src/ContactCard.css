@@ -59,6 +59,8 @@ a[href^="tel"] {
       .contact-card{
       width: 100%;
       margin: 10px;
+      margin-left: 0;
+      margin-right: 0;
       padding: 0;
   }
 }

@@ -124,7 +124,7 @@ div {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   margin-top: 20px;
@@ -242,6 +242,16 @@ ul{
   margin-top: 30px;
 }
 
+.myTextWrapper{
+  margin: 0;
+  padding: 0;
+}
+
+#connectUpper{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 @media (max-width: 995px) {
   .headline {
     font-size: 41px;
@@ -249,6 +259,10 @@ ul{
 }
 
 @media (max-width: 768px) {
+  #connectUpper{
+  padding-left: 0px;
+  padding-right: 0px;
+}
   .list-title{
 
   font-size: 20px;

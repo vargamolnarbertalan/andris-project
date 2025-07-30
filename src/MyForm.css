@@ -1,0 +1,84 @@
+.form-group{
+    color: var(--andris-blue);
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+textarea {
+  resize: none;
+  overflow-y: auto;    /* vertical scrolling only */
+  overflow-x: hidden;  /* no horizontal scroll */
+    width: 100%;
+}
+
+input{
+      width: 100%;
+}
+
+input, textarea{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.contact-form-container{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+}
+
+ #connectTextP{
+    width: 100%;
+    text-align: justify;
+}
+form{
+    width: 100%;
+}
+
+input,
+textarea {
+  border: 1px solid var(--andris-blue);       /* border color */
+  border-radius: 8px;           /* rounded corners */
+  padding: 2px;                 /* optional: inner spacing */
+  background-color: white;       /* background color */
+  color: var(--andris-blue);                  /* text color */
+  outline: none;                /* remove default focus outline */
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--andris-bluelight);        /* blue border on focus */
+  box-shadow: 0 0 4px var(--andris-blue); /* soft glow effect on focus */
+}
+
+#submitBtn{
+    width: 20%;
+    background-color: var(--andris-blue);
+    border: 2px solid var(--andris-bluelight);       
+    border-radius: 8px;          
+    padding: 2px;                
+    color: white;                
+    outline: none; 
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#submitBtn:hover{
+    background-color: var(--andris-bluelight);
+    box-shadow: 0 0 4px var(--andris-blue);
+}
+
+@media (max-width: 768px) {
+.contact-form-container{
+    height: auto;
+}
+#submitBtn{
+    width: 100%;
+}
+#connectTextP{
+    margin-bottom: 16px;
+}
+#connectUpper{
+    margin-bottom: 20px;
+}
+}

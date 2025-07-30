@@ -54,7 +54,13 @@ i18n
                     sText12: "Let me handle the logistics—so you can focus on your new chapter.",
                     sText13: "Please do not hesitate to contact me if you have any questions regarding your current or future stay in Hungary.",
                     connectText: "If you are a foreign national planning to live and work in Hungary, or a company seeking reliable support in employing international talent, I am here to help.",
-                    phone: "Phone"
+                    phone: "Phone",
+                    fSuccessMsg: "Thank you for reaching out to me! I will get back to you soon!",
+                    fName: "Your name",
+                    fEmailPhone: "Email or phone number",
+                    fMsg: "Mesage",
+                    fSubmit: "Send"
+                
                 },
             },
             hu: {
@@ -99,7 +105,12 @@ i18n
                     sText12: "Hagyd, hogy én intézzem a logisztikát – így te már az új fejezetre koncentrálhatsz!",
                     sText13: "Ha bármilyen kérdésed van a jelenlegi vagy jövőbeli magyarországi tartózkodásoddal kapcsolatban, keress bizalommal.",
                     connectText: "Ha külföldi állampolgárként Magyarországon szeretnél élni és dolgozni, vagy vállalatként megbízható támogatást keresel a nemzetközi tehetségek foglalkoztatásában, örömmel segítek.",
-                    phone: "Telefon"
+                    phone: "Telefon",
+                    fSuccessMsg: "Köszönöm az üzenetet! Hamarosan keresni fogom a megadott elérhetőségen!",
+                    fName: "Név",
+                    fEmailPhone: "Email cím vagy telefonszám",
+                    fMsg: "Üzenet",
+                    fSubmit: "Küldés"
                 },
             },
         },
