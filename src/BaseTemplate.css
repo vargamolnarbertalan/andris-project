@@ -10,12 +10,17 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400; /* works reliably now */
+  line-height: 1.4;
 }
 
 .myTitle {
   font-weight: 700;
 }
 
+.myJustify{
+  text-align: justify;
+  line-height: 1.4;
+}
 
 div {
   text-wrap: pretty;
@@ -262,6 +267,11 @@ ul{
   padding-right: 10px;
 }
 
+.mobileUnJustify{
+  line-height: 1.4;
+}
+
+
 
 .myTitle {
   font-weight: 700;
@@ -332,8 +342,10 @@ ul{
     padding: 0 5%;
   }
 
-  .did-u-know, .mobileJustify {
-    text-align: justify;
+  .did-u-know, .mobileUnJustify {
+    text-align: center;
+    font-size: 13pt;
+    line-height: 1.4;
   }
   .headline {
     font-size: 25px;

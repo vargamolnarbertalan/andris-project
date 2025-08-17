@@ -24,7 +24,7 @@ export default function ContactForm() {
 
     return (
         <div className="contact-form-container">
-            <p id='connectTextP' className="lead-intro intro lead mobileJustify center-title">
+            <p id='connectTextP' className="lead-intro intro lead mobileUnJustify center-title">
                 {t('connectText')}
             </p>
             {submitted ? (

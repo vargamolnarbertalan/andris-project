@@ -34,7 +34,7 @@
   z-index: 2;
   filter: grayscale(100%);
   clip-path: inset(0% 0% 0% 0%);
-  animation: wipeClip 2s ease-in-out forwards;
+  animation: wipeClip 3.5s ease-in-out forwards;
 }
 
 /* Clip path wipe (top stays, bottom gets clipped) */

@@ -87,7 +87,7 @@ const BaseTemplate = () => {
                 <img id="introImage" className="pic textImage" src="/img/1.jpg" alt='avatar'></img>
               </div>
               <div className='myTextWrapper'>
-                <p className="lead-intro lead">
+                <p className="lead-intro lead mobileUnJustify">
                   {t('aboutText1')}
                   <p></p>
                   {t('aboutText2')}
@@ -127,7 +127,7 @@ const BaseTemplate = () => {
         <section id="mediaSection" className='center-title'>
           <div className='intro'>
             <h1 className="myTitle introTitle display-4">{t('media')}</h1>
-          <p className="story lead text-white-own">
+            <p className="story lead text-white-own mobileUnJustify">
             {t('mediaText1')}
           </p>
           </div>
@@ -152,8 +152,8 @@ const BaseTemplate = () => {
           <h2 className="myTitle center-title display-5 text-white-own" style={styles.refStyle}>{t('services')}</h2>
           <div className='container'>
             <div className='myTextWrapper'>
-              <p className="lead text-white-own" style={{ textAlign: 'justify' }}>{t('sText1')}</p>
-              <p className="lead text-white-own" style={{ textAlign: 'justify' }}>{t('sText2')}</p>
+              <p className="lead text-white-own myJustify mobileUnJustify">{t('sText1')}</p>
+              <p className="lead text-white-own myJustify mobileUnJustify">{t('sText2')}</p>
             </div>
             <div className='picHolder' style={{justifyContent: 'flex-start'}}>
               <div className="gradient-border" style={{float: 'left'}}>
@@ -162,6 +162,7 @@ const BaseTemplate = () => {
               <div className="myListHolder white-text">
                 <ul>
                   <li>{t('sText3')}</li>
+                  <li>{t('sText32')}</li>
                   <li>{t('sText4')}</li>
                   <li>{t('sText5')}</li>
                   <li>{t('sText6')}</li>
@@ -174,11 +175,11 @@ const BaseTemplate = () => {
               
 
               <p className="lead text-white-own">
-                <p className='mobileJustify'>{t('sText9')}</p>
-                <p className='mobileJustify'>{t('sText10')}</p>
-                <p className='mobileJustify'>{t('sText11')}</p>
-                <p className='mobileJustify'>{t('sText12')}</p>
-                <p className='mobileJustify'>{t('sText13')}</p>
+                <p className='mobileUnJustify myJustify'>{t('sText9')}</p>
+                <p className='mobileUnJustify myJustify'>{t('sText10')}</p>
+                <p className='mobileUnJustify myJustify'>{t('sText11')}</p>
+                <p className='mobileUnJustify myJustify'>{t('sText12')}</p>
+                <p className='mobileUnJustify myJustify'>{t('sText13')}</p>
               </p>
             </div>
           </div>
@@ -187,7 +188,7 @@ const BaseTemplate = () => {
 
         <section id="connectSection">
           <div className="container text-center">
-            <h1 className="myTitle introTitle intro display-4">{t('connect')}</h1>
+            <h1 className="myTitle introTitle intro display-4 ">{t('connect')}</h1>
 
             <div id="connectUpper" className="picHolder">
               <div className="gradient-border">
@@ -201,7 +202,7 @@ const BaseTemplate = () => {
                 <ContactCard imgSrc="imessage.webp" link={false} title="iMessage" desc="+36 20 208 0124" />
                 <ContactCard imgSrc="viber.webp" link="viber://add?number=36202080124" title="Viber" desc="+36 20 208 0124" />
                 <ContactCard imgSrc="phone.webp" link="tel:+36202080124" title={t('phone')} desc="+36 20 208 0124" />
-                <ContactCard imgSrc="mail.webp" link="mailto:andras.bene1980@gmail.com" title="Email" desc="" />
+                <ContactCard imgSrc="mail.webp" link="mailto:info@movingtohungary.hu" title="Email" desc="" />
                 <ContactCard imgSrc="discord.webp" link="https://discordapp.com/1399693015840325653" title="Discord" desc="andrasbene" />
                 <ContactCard imgSrc="telegram.png" link={false} title="Telegram" desc="+36 20 208 0124" />
                 <ContactCard imgSrc="teams.png" link={false} title="MS Teams" desc="" />
