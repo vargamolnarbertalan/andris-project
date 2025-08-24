@@ -22,8 +22,16 @@ const ContactCard = ({imgSrc, title, desc, link}) => {
                 </>
                  <div className="custom-card-body card-body">
                     <div className="contact-title card-title project-card-title-new">{title}</div>
-                    <p className={title === "Email" || title === "MS Teams" ? "shrink-email contact-text card-text" : "contact-text card-text"}>
-                        {title === "Email" || title === "MS Teams" ? <>info<wbr></wbr>@movingtohungary.hu</> : desc}
+                    <p className={title === "Email" || title === "MS Teams"
+                        ? "shrink-email contact-text card-text"
+                        : "contact-text card-text"}>
+                        {title === "Email" ? (
+                            <>info<wbr />@movingtohungary.hu</>
+                        ) : title === "MS Teams" ? (
+                            <>andras.bene1980<wbr />@gmail.com</>
+                        ) : (
+                            desc
+                        )}
                     </p>
                 </div>
             </div>
