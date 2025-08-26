@@ -198,12 +198,12 @@ const BaseTemplate = () => {
             </div>
             <div className='myTextWrapper'>
               <div className="contact-row row">
-                <ContactCard imgSrc="whatsapp.webp" link="https://wa.me/+36202080124" title="WhatsApp" desc="+36 20 208 0124" />
+                <ContactCard imgSrc="whatsapp.webp" link={false} title="WhatsApp" desc="+36 20 208 0124" />
                 <ContactCard imgSrc="imessage.webp" link={false} title="iMessage" desc="+36 20 208 0124" />
-                <ContactCard imgSrc="viber.webp" link="viber://add?number=36202080124" title="Viber" desc="+36 20 208 0124" />
-                <ContactCard imgSrc="phone.webp" link="tel:+36202080124" title={t('phone')} desc="+36 20 208 0124" />
-                <ContactCard imgSrc="mail.webp" link="mailto:info@movingtohungary.hu" title="Email" desc="" />
-                <ContactCard imgSrc="discord.webp" link="https://discordapp.com/1399693015840325653" title="Discord" desc="andrasbene" />
+                <ContactCard imgSrc="viber.webp" link={false} title="Viber" desc="+36 20 208 0124" />
+                <ContactCard imgSrc="phone.webp" link={false} title={t('phone')} desc="+36 20 208 0124" />
+                <ContactCard imgSrc="mail.webp" link={false} title="Email" desc="" />
+                <ContactCard imgSrc="discord.webp" link={false} title="Discord" desc="andrasbene" />
                 <ContactCard imgSrc="telegram.png" link={false} title="Telegram" desc="+36 20 208 0124" />
                 <ContactCard imgSrc="teams.png" link={false} title="MS Teams" desc="" />
                 <ContactCard imgSrc="linkedin.png" link="https://www.linkedin.com/in/bene-andras/" title="LinkedIn" desc="/bene-andras" />
