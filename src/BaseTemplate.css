@@ -124,7 +124,7 @@ div {
   font-size: 51px;
 }
 
-#aboutSection, #mediaSection, #connectSection{
+#aboutSection, #mediaSection, #connectSection, #missionSection, #servicesSection{
   color: black;
   padding: 100px 0;
   background-color: white;
@@ -301,8 +301,8 @@ ul{
     width: 100%;
     height: auto;
   }
-  #aboutSection, #mediaSection, #connectSection{
-    padding-top: 50px;
+  #aboutSection, #mediaSection, #connectSection, #missionSection, #servicesSection{
+    padding-top: 80px;
     padding-bottom: 50px;
   }
   .row,
