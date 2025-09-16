@@ -15,11 +15,6 @@ input{
       width: 100%;
 }
 
-input, textarea{
-    text-align: center;
-    vertical-align: middle;
-}
-
 .contact-form-container{
     display: flex;
     flex-direction: column;
@@ -40,10 +35,13 @@ input,
 textarea {
   border: 1px solid var(--andris-blue);       /* border color */
   border-radius: 8px;           /* rounded corners */
-  padding: 2px;                 /* optional: inner spacing */
+  padding: 2px;       
+  padding-left: 10px;
   background-color: white;       /* background color */
   color: var(--andris-blue);                  /* text color */
-  outline: none;                /* remove default focus outline */
+  outline: none;      
+  text-align: left;
+  vertical-align: middle;       /* remove default focus outline */
 }
 
 input:focus,
