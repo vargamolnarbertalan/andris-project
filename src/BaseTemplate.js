@@ -6,10 +6,12 @@ import MyForm from "./MyForm";
 import './BaseTemplate.css';
 import ContactCard from "./ContactCard";
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 //import Popup from "./Popup";
 
 const BaseTemplate = () => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   /*
   const [popupOpen, setPopupOpen] = useState(() => {
@@ -39,6 +41,19 @@ const BaseTemplate = () => {
       }, 4000)
     }
   }, [errorOpen]); // `count` is the dependency
+
+  // Handle hash scrolling when navigating from other pages
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.substring(1); // Remove the # symbol
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); // Small delay to ensure page is rendered
+    }
+  }, [location.hash]);
 
   /*
     function closeFunc() {

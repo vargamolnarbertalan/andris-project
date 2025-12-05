@@ -148,11 +148,36 @@ div {
   margin-right: auto;
 }
 
+/* Widget reload button styling */
+.widget-reload-btn,
+.widget-reload-btn *,
+button.widget-reload-btn,
+button.widget-reload-btn * {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+.widget-reload-btn:hover {
+  background-color: var(--andris-bluelight) !important;
+  box-shadow: 0 0 4px var(--andris-blue) !important;
+}
+
+/* LinkedIn widget loadmore button styling */
+.sk-posts-loadmore,
+.sk-posts-loadmore *,
+button.sk-posts-loadmore,
+button.sk-posts-loadmore *,
+a.sk-posts-loadmore,
+a.sk-posts-loadmore * {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
 /* Ensure LinkedIn widget content has proper text color */
 .blog-content,
-.blog-content *,
+.blog-content *:not(.widget-reload-btn):not(.widget-reload-btn *):not(.sk-posts-loadmore):not(.sk-posts-loadmore *),
 .sk-ww-linkedin-profile-post,
-.sk-ww-linkedin-profile-post * {
+.sk-ww-linkedin-profile-post *:not(.sk-posts-loadmore):not(.sk-posts-loadmore *) {
   color: #000 !important;
   -webkit-text-fill-color: initial !important;
   background-clip: initial !important;
@@ -166,6 +191,19 @@ div {
 .sk-ww-linkedin-profile-post a {
   color: inherit !important;
   -webkit-text-fill-color: initial !important;
+}
+
+/* Exclude buttons from black text rule - must come after general rule */
+.sk-ww-linkedin-profile-post .sk-posts-loadmore,
+.sk-ww-linkedin-profile-post .sk-posts-loadmore *,
+.sk-posts-loadmore,
+.sk-posts-loadmore *,
+.blog-content .widget-reload-btn,
+.blog-content .widget-reload-btn *,
+.widget-reload-btn,
+.widget-reload-btn * {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
 }
 
 /* Hide the followers count */

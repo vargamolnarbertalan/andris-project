@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Navbar.css';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LangSwitcher from "./LangSwitcher";
 
 const Navbar = () => {
     const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     // Function to close navbar on mobile when link is clicked
     const closeNavbar = () => {
@@ -15,6 +17,31 @@ const Navbar = () => {
         if (navbarCollapse && navbarCollapse.classList.contains('show')) {
             // Simply remove the 'show' class to close the navbar
             navbarCollapse.classList.remove('show');
+        }
+    };
+
+    // Function to handle section navigation
+    const handleSectionClick = (e, sectionId) => {
+        e.preventDefault();
+        closeNavbar();
+        
+        // If we're already on the home page, scroll to section
+        if (location.pathname === '/') {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // Navigate to home page with hash
+            navigate('/');
+            // Set hash after a brief delay to ensure navigation completes
+            setTimeout(() => {
+                window.location.hash = sectionId;
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
         }
     };
 
@@ -53,19 +80,19 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <a className="mynavbar-text nav-link" href="#aboutSection" onClick={closeNavbar}>{t('about')}</a>
+                            <a className="mynavbar-text nav-link" href="#aboutSection" onClick={(e) => handleSectionClick(e, 'aboutSection')}>{t('about')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mynavbar-text nav-link" href="#missionSection" onClick={closeNavbar}>{t('mission')}</a>
+                            <a className="mynavbar-text nav-link" href="#missionSection" onClick={(e) => handleSectionClick(e, 'missionSection')}>{t('mission')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mynavbar-text nav-link" href="#mediaSection" onClick={closeNavbar}>{t('media')}</a>
+                            <a className="mynavbar-text nav-link" href="#mediaSection" onClick={(e) => handleSectionClick(e, 'mediaSection')}>{t('media')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mynavbar-text nav-link" href="#servicesSection" onClick={closeNavbar}>{t('services')}</a>
+                            <a className="mynavbar-text nav-link" href="#servicesSection" onClick={(e) => handleSectionClick(e, 'servicesSection')}>{t('services')}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mynavbar-text nav-link" href="#connectSection" onClick={closeNavbar}>{t('connect')}</a>
+                            <a className="mynavbar-text nav-link" href="#connectSection" onClick={(e) => handleSectionClick(e, 'connectSection')}>{t('connect')}</a>
                         </li>
                         <li className="nav-item">
                             <Link className="mynavbar-text nav-link" to="/blog" onClick={closeNavbar}>{t('blog')}</Link>

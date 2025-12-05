@@ -61,7 +61,9 @@ i18n
                     fName: "Your name",
                     fEmailPhone: "Email or phone number",
                     fMsg: "Mesage",
-                    fSubmit: "Send"
+                    fSubmit: "Send",
+                    reloadWidget: "Reload Feed",
+                    widgetNotLoaded: "Feed not loading? Click to reload the page."
                 
                 },
             },
@@ -114,7 +116,9 @@ i18n
                     fName: "Név",
                     fEmailPhone: "Email cím vagy telefonszám",
                     fMsg: "Üzenet",
-                    fSubmit: "Küldés"
+                    fSubmit: "Küldés",
+                    reloadWidget: "Hírfolyam újratöltése",
+                    widgetNotLoaded: "Nem töltődik be a hírfolyam? Kattints az oldal újratöltéséhez."
                 },
             },
         },
