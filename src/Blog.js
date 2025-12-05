@@ -41,6 +41,15 @@ const Blog = () => {
         <section id="blogSection">
           <div className="container text-center">
             <h1 className="myTitle introTitle intro display-4">{t('blog')}</h1>
+            <div className="blog-header refs" style={styles.blogHeader}>
+              <div className="gradient-border">
+                <img className="pic textImage" src="/img/avatar.jpg" alt="avatar"></img>
+              </div>
+              <div className="blog-tagline-wrapper">
+                <h2 className="blog-tagline intro myTitle" dangerouslySetInnerHTML={{ __html: t('blogTagline') }}></h2>
+              </div>
+              <img className="blog-outline-image" src="/outline-three.png" alt="outline map" />
+            </div>
             <div className="blog-content" style={styles.blogContent}>
               <div key={widgetKey} className="sk-ww-linkedin-profile-post" data-embed-id="25629962"></div>
               <div className="widget-reload-container" style={styles.reloadContainer}>
@@ -75,6 +84,20 @@ const Blog = () => {
 const styles = {
   pageContainer: {
     lineHeight: 1.6
+  },
+  blogHeader: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    margin: '20px 0',
+    gap: '30px',
+    width: '95%',
+    maxWidth: 'none',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    padding: '30px',
+    position: 'relative'
   },
   blogContent: {
     display: 'flex',

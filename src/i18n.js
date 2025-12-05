@@ -63,7 +63,8 @@ i18n
                     fMsg: "Mesage",
                     fSubmit: "Send",
                     reloadWidget: "Reload Feed",
-                    widgetNotLoaded: "Feed not loading? Click to reload the page."
+                    widgetNotLoaded: "Feed not loading? Click to reload the page.",
+                    blogTagline: "YOUR<br>HELPING<br>HAND<br>IN HUNGARY"
                 
                 },
             },
@@ -118,7 +119,8 @@ i18n
                     fMsg: "Üzenet",
                     fSubmit: "Küldés",
                     reloadWidget: "Hírfolyam újratöltése",
-                    widgetNotLoaded: "Nem töltődik be a hírfolyam? Kattints az oldal újratöltéséhez."
+                    widgetNotLoaded: "Nem töltődik be a hírfolyam? Kattints az oldal újratöltéséhez.",
+                    blogTagline: "AZ ÖN<br>SEGÍTŐ<br>KEZE<br>MAGYAR-<br>ORSZÁGON"
                 },
             },
         },

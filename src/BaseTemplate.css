@@ -125,6 +125,40 @@ div {
   font-size: 51px;
 }
 
+
+.blog-header {
+  position: relative;
+}
+
+.blog-outline-image {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: auto;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.blog-tagline {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  text-align: left;
+  background: linear-gradient(to right, #ffffff, #c0c0c0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blog-tagline-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
 #aboutSection, #mediaSection, #connectSection, #missionSection, #servicesSection, #blogSection{
   color: black;
   padding: 100px 0;
@@ -173,11 +207,28 @@ a.sk-posts-loadmore * {
   -webkit-text-fill-color: white !important;
 }
 
+/* LinkedIn widget follow button styling */
+.sk-header-follow-btn,
+.sk-header-follow-btn *,
+a.sk-header-follow-btn,
+a.sk-header-follow-btn *,
+.sk-button.sk-header-follow-btn,
+.sk-button.sk-header-follow-btn *,
+.blog-content .sk-header-follow-btn,
+.blog-content .sk-header-follow-btn *,
+.blog-content a.sk-header-follow-btn,
+.blog-content a.sk-header-follow-btn *,
+.blog-content .sk-button.sk-header-follow-btn,
+.blog-content .sk-button.sk-header-follow-btn * {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
 /* Ensure LinkedIn widget content has proper text color */
 .blog-content,
-.blog-content *:not(.widget-reload-btn):not(.widget-reload-btn *):not(.sk-posts-loadmore):not(.sk-posts-loadmore *),
+.blog-content *:not(.widget-reload-btn):not(.widget-reload-btn *):not(.sk-posts-loadmore):not(.sk-posts-loadmore *):not(.sk-header-follow-btn):not(.sk-header-follow-btn *),
 .sk-ww-linkedin-profile-post,
-.sk-ww-linkedin-profile-post *:not(.sk-posts-loadmore):not(.sk-posts-loadmore *) {
+.sk-ww-linkedin-profile-post *:not(.sk-posts-loadmore):not(.sk-posts-loadmore *):not(.sk-header-follow-btn):not(.sk-header-follow-btn *) {
   color: #000 !important;
   -webkit-text-fill-color: initial !important;
   background-clip: initial !important;
@@ -201,9 +252,21 @@ a.sk-posts-loadmore * {
 .blog-content .widget-reload-btn,
 .blog-content .widget-reload-btn *,
 .widget-reload-btn,
-.widget-reload-btn * {
+.widget-reload-btn *,
+.sk-header-follow-btn,
+.sk-header-follow-btn *,
+.sk-header-follow-btn span,
+.sk-header-follow-btn span *,
+.sk-button.sk-header-follow-btn,
+.sk-button.sk-header-follow-btn *,
+.sk-button.sk-header-follow-btn span,
+.sk-button.sk-header-follow-btn span *,
+#blogSection > div > div.blog-content > div.sk-ww-linkedin-profile-post > div.sk-posts-header > div.sk-header-bottom > div > a,
+#blogSection > div > div.blog-content > div.sk-ww-linkedin-profile-post > div.sk-posts-header > div.sk-header-bottom > div > a * {
   color: white !important;
   -webkit-text-fill-color: white !important;
+  background-clip: initial !important;
+  -webkit-background-clip: initial !important;
 }
 
 /* Hide the followers count */
@@ -528,6 +591,27 @@ ul{
     width: 100%;
     height: auto;
   }
+  .blog-header {
+    flex-direction: row !important;
+    gap: 15px !important;
+    padding: 30px 15px !important;
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+  }
+
+  .blog-outline-image {
+    display: none !important;
+  }
+  .blog-tagline {
+    font-size: 36px !important;
+    text-align: left;
+    line-height: 1.1 !important;
+    background: linear-gradient(to right, #ffffff, #c0c0c0) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
   #aboutSection, #mediaSection, #connectSection, #missionSection, #servicesSection, #blogSection{
     padding-top: 80px;
     padding-bottom: 50px;
@@ -576,6 +660,12 @@ ul{
 
 }
 
+@media (max-width: 1300px) {
+  .blog-outline-image {
+    display: none !important;
+  }
+}
+
 @media (max-width: 425px) {
   .lead-contact,
   .story {
@@ -591,3 +681,4 @@ ul{
     font-size: 25px;
   }
 }
+
