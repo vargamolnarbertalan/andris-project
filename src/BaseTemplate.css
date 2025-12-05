@@ -5,6 +5,7 @@
   --andris-green: #175030;
   --andris-bluelight: #0063aa;
   --andris-yellowdark: #afa390;
+  --widget-bg-color: #f9fafb;
 }
 
 body {
@@ -124,10 +125,198 @@ div {
   font-size: 51px;
 }
 
-#aboutSection, #mediaSection, #connectSection, #missionSection, #servicesSection{
+#aboutSection, #mediaSection, #connectSection, #missionSection, #servicesSection, #blogSection{
   color: black;
   padding: 100px 0;
   background-color: white;
+}
+
+#blogSection .container {
+  max-width: 95% !important;
+  width: 95% !important;
+}
+
+/* Blog content wrapper styling */
+.blog-content {
+  padding: 30px;
+  background-color: var(--widget-bg-color);
+  border-radius: 12px;
+  margin: 20px 0;
+  width: 95%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure LinkedIn widget content has proper text color */
+.blog-content,
+.blog-content *,
+.sk-ww-linkedin-profile-post,
+.sk-ww-linkedin-profile-post * {
+  color: #000 !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  -webkit-background-clip: initial !important;
+}
+
+/* Reset text color for specific widget elements */
+.sk-ww-linkedin-profile-post p,
+.sk-ww-linkedin-profile-post span,
+.sk-ww-linkedin-profile-post div,
+.sk-ww-linkedin-profile-post a {
+  color: inherit !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Hide the followers count */
+.sk-header-followers {
+  display: none !important;
+}
+
+/* LinkedIn widget post styling */
+.sk-post-item {
+  background-color: #fff !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  text-align: left !important;
+}
+
+.sk-post-header {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 12px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.sk-post-userpic {
+  margin-right: 12px !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+.sk-post-userpic img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.sk-post-userinfo {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.sk-post-username {
+  color: #000 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  text-decoration: none !important;
+  margin-bottom: 4px !important;
+  text-align: left !important;
+}
+
+.sk-post-username:hover {
+  color: var(--andris-bluelight) !important;
+}
+
+.sk-post-dateposted {
+  color: #666 !important;
+  font-size: 16px !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.sk-post-link {
+  margin-left: auto !important;
+}
+
+.sk-post-link a {
+  color: #666 !important;
+  text-decoration: none !important;
+}
+
+.sk-post-link svg {
+  width: 20px !important;
+  height: 20px !important;
+  fill: #666 !important;
+}
+
+.sk-post-body {
+  color: #455368 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 12px !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.sk-post-body-full {
+  color: #455368 !important;
+  text-align: left !important;
+}
+
+.sk-post-media {
+  margin: 12px 0 !important;
+}
+
+.sk-post-image-wrapper img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+}
+
+.sk-post-footer {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  padding-top: 12px !important;
+  border-top: 1px solid #e0e0e0 !important;
+}
+
+.sk-post-likes,
+.sk-post-comments {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #666 !important;
+  font-size: 14px !important;
+}
+
+.sk-post-likes-icon svg,
+.sk-post-comments-icon svg {
+  fill: #9CA2AB !important;
+}
+
+.sk-post-likes p,
+.sk-post-comments p {
+  margin: 0 !important;
+  color: #666 !important;
+  font-size: 16px !important;
+  text-align: left !important;
+}
+
+.sk-post-share {
+  margin-left: auto !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 4px !important;
+}
+
+.sk-post-share svg {
+  width: 18px !important;
+  height: 18px !important;
+  fill: #9CA2AB !important;
 }
 
 .contact-row {
@@ -301,9 +490,22 @@ ul{
     width: 100%;
     height: auto;
   }
-  #aboutSection, #mediaSection, #connectSection, #missionSection, #servicesSection{
+  #aboutSection, #mediaSection, #connectSection, #missionSection, #servicesSection, #blogSection{
     padding-top: 80px;
     padding-bottom: 50px;
+  }
+  #blogSection .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .blog-content {
+    width: 100% !important;
+    padding: 15px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 !important;
   }
   .row,
   .picHolder {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./Splash.css"; // We'll style it here
 import BaseTemplate from './BaseTemplate'; // Update the path as per your project structure
+import Blog from './Blog';
 
 const SplashScreen = ({ onFinish }) => {
   useEffect(() => {
@@ -33,7 +34,7 @@ function App() {
       ) : (
           <Router>
             <Routes>
-
+              <Route path="/blog" element={<Blog />} />
               {/* Catch-all route for all other paths */}
               <Route path="*" element={<MainApp />} />
             </Routes>

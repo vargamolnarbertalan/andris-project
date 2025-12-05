@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Navbar.css';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import LangSwitcher from "./LangSwitcher";
 
 const Navbar = () => {
@@ -28,9 +29,9 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light sticky-top">
             <div className={isVisible ? 'top-box9 container-fluid' : 'top-box4 container-fluid'}>
-                <a className="mynavbar-brand navbar-brand" href="#">
+                <Link className="mynavbar-brand navbar-brand" to="/">
                     <img id="navLogo" className="navImage" src="/img/mainlogo.jpg" alt='logo'></img>
-                </a>
+                </Link>
                 {/* Right side container for hamburger menu and language switcher (mobile only) */}
                 <div className="d-flex flex-row align-items-center gap-2 d-lg-none">
                     {/* Language switcher - visible on mobile only */}
@@ -65,6 +66,9 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <a className="mynavbar-text nav-link" href="#connectSection" onClick={closeNavbar}>{t('connect')}</a>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="mynavbar-text nav-link" to="/blog" onClick={closeNavbar}>{t('blog')}</Link>
                         </li>
                     </ul>
 
